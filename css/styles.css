@@ -891,6 +891,7 @@ a {
   text-decoration: none;
 }
 .subsribe-button-icon {
+  /* position: absolute; */
   display: inline-block;
   width: 24px;
   height: 24px;

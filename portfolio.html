@@ -324,29 +324,23 @@
         </div>
         <div class="subscribe">
           <p class="subsribe-paragraph">Підпишіться на розсилку</p>
-          <form action="subscribe">
-            <ul class="subcribe-form">
-              <li class="subscribe-list">
-                <input
-                  type="email"
-                  id="subscribe"
-                  class="subcribe-input"
-                  placeholder="E-mail"
-                  name="e-mail"
-                  autocomplete="email"
-                  required
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                />
-              </li>
-              <label for="subscribe" class="subscribe-list">
-                <button type="submit" href="#" class="subscribe-button">
-                  Підписатися
-                  <svg width="24" height="24" class="subsribe-button-icon">
-                    <use href="./images/icons.svg#icon-send"></use>
-                  </svg>
-                </button>
-              </label>
-            </ul>
+          <form action="subscribe" class="subcribe-form">
+            <input
+              type="email"
+              id="subscribe"
+              class="subcribe-input"
+              placeholder="E-mail"
+              name="e-mail"
+              autocomplete="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+            <button type="submit" href="#" class="subscribe-button">
+              Підписатися
+              <svg width="24" height="24" class="subsribe-button-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>

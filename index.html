@@ -52,80 +52,72 @@
     </header>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p class="modal-form">Залиште свої дані, ми вам передзвонимо</p>
         <button type="button" class="modal-close-button" data-modal-close>
-          <svg class="modal-close" width="30" height="30">
-            <use href="./images/icons.svg#close"></use>
+          <svg width="18" height="18">
+            <use href="./images/icons.svg#close" class="modal-close"></use>
           </svg>
         </button>
-        <form name="order-service">
-          <ul class="form-list">
-            <li class="form-field">
+
+        <form name="order-service" class="form-list">
+          <p class="modal-form">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="form-field">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              class="form-input"
+              autocomplete="name"
+              required
+            />
+            <label for="first-name" class="form-label">Ім'я</label>
+            <svg width="18" height="18" class="icon-form-input">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <input type="tel" name="tel" id="tel" class="form-input" autocomplete="tel" required />
+            <label for="tel" class="form-label">Телефон</label>
+            <svg width="18" height="18" class="icon-form-input">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-input"
+              autocomplete="email"
+              required
+            />
+            <label for="email" class="form-label">Пошта</label>
+            <svg width="18" height="18" class="icon-form-input">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </div>
+          <div class="form-field-textarea">
+            <label class="form-textarea">
+              <span class="form-text-area-label"> Коментар</span>
+              <textarea name="feedback" placeholder="Введіть текст" class="textarea"></textarea>
+            </label>
+          </div>
+          <div class="term-service">
+            <label for="term-service" class="label-term-service">
               <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                class="form-input"
-                autocomplete="name"
-                required
+                type="checkbox"
+                name="term-service"
+                class="checkbox-term-service"
+                id="term-service"
+                value="term-service"
               />
-              <label for="first-name" class="form-label">Ім'я</label>
-              <svg width="18" height="18" class="icon-form-input">
-                <use href="./images/icons.svg#person"></use>
-              </svg>
-            </li>
-            <li class="form-field">
-              <input
-                type="tel"
-                name="tel"
-                id="tel"
-                class="form-input"
-                autocomplete="tel"
-                required
-              />
-              <label for="tel" class="form-label">Телефон</label>
-              <svg width="18" height="18" class="icon-form-input">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-            </li>
-            <li class="form-field">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="form-input"
-                autocomplete="email"
-                required
-              />
-              <label for="email" class="form-label">Пошта</label>
-              <svg width="18" height="18" class="icon-form-input">
-                <use href="./images/icons.svg#email"></use>
-              </svg>
-            </li>
-            <li class="form-field-textarea">
-              <label class="form-textarea">
-                <span class="form-text-area-label"> Коментар</span>
-                <textarea name="feedback" placeholder="Введіть текст" class="textarea"></textarea>
-              </label>
-            </li>
-            <li class="term-service">
-              <label for="term-service" class="label-term-service">
-                <input
-                  type="checkbox"
-                  name="term-service"
-                  class="checkbox-term-service"
-                  id="term-service"
-                  value="term-service"
-                />
-                <span class="checkbox"></span>
-                Погоджуюся з розсилкою та приймаю&nbsp;
-                <a href="#" class="term-service-link"> Умови договору</a>
-              </label>
-            </li>
-            <li class="button-form">
-              <button type="submit" class="button">Відправити</button>
-            </li>
-          </ul>
+              <span class="checkbox"></span>
+              Погоджуюся з розсилкою та приймаю&nbsp;
+              <a href="#" class="term-service-link"> Умови договору</a>
+            </label>
+          </div>
+          <div class="button-form">
+            <button type="submit" class="button">Відправити</button>
+          </div>
         </form>
       </div>
     </div>
@@ -518,29 +510,23 @@
         </div>
         <div class="subscribe">
           <p class="subsribe-paragraph">Підпишіться на розсилку</p>
-          <form action="subscribe">
-            <ul class="subcribe-form">
-              <li class="subscribe-list">
-                <input
-                  type="email"
-                  id="subscribe"
-                  class="subcribe-input"
-                  placeholder="E-mail"
-                  name="e-mail"
-                  autocomplete="email"
-                  required
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                />
-              </li>
-              <label for="subscribe" class="subscribe-list">
-                <button type="submit" href="#" class="subscribe-button">
-                  Підписатися
-                  <svg width="24" height="24" class="subsribe-button-icon">
-                    <use href="./images/icons.svg#icon-send"></use>
-                  </svg>
-                </button>
-              </label>
-            </ul>
+          <form action="subscribe" class="subcribe-form">
+            <input
+              type="email"
+              id="subscribe"
+              class="subcribe-input"
+              placeholder="E-mail"
+              name="e-mail"
+              autocomplete="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+            <button type="submit" href="#" class="subscribe-button">
+              Підписатися
+              <svg width="24" height="24" class="subsribe-button-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
